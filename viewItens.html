@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Itens</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      
+    
+        header > h1{
+            margin: auto;
+            color: white;
+            font-size: 6.5em;
+            text-align: center;
+            text-shadow: 0px 1px 5px black;
+        }
+        header{
+            background-color: #F7F3E3;
+            margin-top: 0;
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
+            padding-bottom: 5px;
+        }
+        img{
+            margin-top: 20px;
+        }
+        div.card{
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.377);
+            background-color: #b48f2aa6;
+        }
+
+        .search-container {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+    .search-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        cursor: pointer;
+        }
+
+    .search-icon::before {
+        content: '';
+        width: 25%;
+        height: 25%;
+        border-radius: 50%;
+        border: 2px solid #f2cb05;
+        }
+
+    .search-icon::after {
+        content: '';
+        width: 20%;
+        height: 2px;
+        background-color: #f2cb05;
+        }
+
+    .search-input {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border:none;
+        box-shadow: 1px 1px 4px black;
+        outline: none;
+        padding-left: 40px;
+        transition: all 0.7s;
+        }
+
+    .search-input:focus {
+        width: 250px;
+        box-shadow: 2px 2px 5px #777;
+        }
+
+    .search-input:valid {
+        width: 250px;
+        }
+
+    div.search-container{
+        margin-left: 30%;
+        
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: rgba(0, 0, 0, 0.712);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acervo</h1>
+        <div class="search-container">
+            <label for="search-input" class="search-icon"></label>
+            <input type="text" class="search-input" id="search-input" required />
+        </div>
+    </header>
+    
+        <div class="container-fluid d-flex flex-wrap" style="padding-top: 5px; align-items: center; justify-content: center;">
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/abaco.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Abaco</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> O ábaco ou soroban 算盤の, é um antigo instrumento de cálculo, popu...</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/balançaAnalitica.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Balança Analítica</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> Analítica pois destina-se à análise de determinada grandeza sob certas condições ambientais</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/cofre.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Cofre Antigo</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> Cofre é um compartimento próprio para armazenar...</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/maqCostura.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Maquina de Costura</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> A máquina de costura é um aparelho utilizado para unir ou prender partes ...</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/mesaEscolaAntiga.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Mesa Escolar</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> Mesa escolar de madeira popularmente utilizada em escolas publicas nos anos..</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="card" style="width: 18rem; margin: 30px; text-align:center;" >
+                    <img width="255" height="255" src="itensimg/instrumentos.jpeg" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title" href="#"><strong>Nome:</strong> Instrumentos de Sopro</h5>
+                        <p class="card-text"><strong>Século:</strong> XX</p>
+                        <p class="card-text"><Strong>Descrição:</Strong> Instrumentos de sopro ou instrumentos de vento são...</p>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    
+</body>
+</html>

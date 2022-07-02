@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="./style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./meujs.js"></script>
+<link rel="shortcut icon" href="./img/descartezap.ico" />
+
+<!-- não remova, é essencial!!! -->
+
+<!-- bibliotecas de sniptes e bootstrap -->
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/whatsapp-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">
+
+
+
+<!-- scripts -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/whatsapp-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+<!-- aqui começa o site -->
+
+<title>
+    DESCARTEZap
+</title>
+
+</head>
+    
+<body>
+       
+    <nav>
+        <div class="menu">
+            <li><ul class="menu nav justify-content-center nav nav-pills fixed-top"></li>
+                    <a class="marca navbar-brand" href="#header">Acervo do Museu Cônego Bento</a>
+                    <li class="nav-item"><a href="#acervo"><span>Acessar Acervo</span></a></li>
+                    <li class="nav-item"><a href=""><span>Doar</span></a></li>
+                    
+                    <li>
+                        <div class="dropdown menu">
+                            <button class="but1 btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#sobre">Sobre Nós</a>
+                              <a class="dropdown-item" href="#sustentabilidade"></a>
+                              <a class="dropdown-item" href="#univesp">A Univesp</a>
+                              <a class="dropdown-item" href="#artigos">Artigos</a>
+                              <a class="dropdown-item" href="#galeria">Galeria</a>
+                            </div>
+                          </div>
+                    </li>
+
+                   
+
+                    <li>
+                        <div class="busc menu input-group rounded">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                            aria-describedby="search-addon" />
+                            <span class="but1 input-group-text border-0" id="search-addon">
+                              <i class="fa fa-search"></i>
+                            </span>
+                          </div>
+                    </li>
+                    
+                    <li class="nav-item"><a href="#login"><span>Login</span></a></li>
+                    <li class="nav-item"><a href="{% url 'account_logout' %}"> <span> <i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; Sair </span></a></li>
+                    <li class="nav-item"><a href="{% url 'account_login' %}"><span id="username"> Usuário </span></a></li>
+
+
+            </ul>
+        </div>
+              
+    </nav>
+
+
+
+<section>
+    <a name="header">
+        <div class="main">
+            <div class="borda">
+                <div class="header_resize">
+                 
+                    <img src="img/logo longo.png"/>
+                 
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+<section>
+    <a name="acervo">
+
+        <div class="team-boxed">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center">Acervo</h2>
+                    <h3 class="text-center">Encontre aqui onde doar seu óleo usado! </h3>
+                </div>
+                    <div class="row people">
+                        <div class="col-sm-6 col-sm-4 item">
+                            <div class="box"><img class="rounded-circle" src="./img/1.jpg"/>
+                                <h3 class="name">Nome ou Empresa</h3>
+                                <p class="title">Cidade ou Região que atende</p>
+                                <p class="description"> Descrição sobre a empresa/autônomo, regiões que pode se deslocar para a coleta. </p>
+                                <div class="social"><a href="https://wa.me/55DDD+TELEFONE" target="_blank"><i class="fa fa-whatsapp"></i></a><a></a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-sm-4 item">
+                            <div class="box"><img class="rounded-circle" src="./img/2.jpg"/>
+                                <h3 class="name">Nome ou Empresa</h3>
+                                <p class="title">Cidade ou Região que atende</p>
+                                <p class="description">Descrição sobre a empresa/autônomo, regiões que pode se deslocar para a coleta. </p>
+                                <div class="social"><a href="https://wa.me/55DDD+TELEFONE" target="_blank"><i class="fa fa-whatsapp"></i></a><a></a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-sm-4 item">
+                            <div class="col-sm-6 col-sm-4 item">
+                            <div class="box"><img class="rounded-circle" src="./img/3.jpg"/>
+                                <h3 class="name">Nome ou Empresa</h3>
+                                <p class="title">Cidade ou Região que atende</p>
+                                <p class="description">Descrição sobre a empresa/autônomo, regiões que pode se deslocar para a coleta. </p>
+                                <div class="social"><a href="https://wa.me/55DDD+TELEFONE" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</a>
+
+</section>
+
+<section>
+<a name="artigos">
+    <div class="caixa">
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="./img/peixe-oleo.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">APOSTE NO FUTURO<br />
+                <span> 15 Setembro 2021 | PRESERVE O FUTURO DOS SEUS FILHOS!</span> </h5>
+                <p class="card-text">O óleo de cozinha é uma mistura de substâncias (ácidos graxos insaturados) 
+                que não apresenta solubilidade alguma na água, pois ele é apolar, e a água, polar. Assim, sempre que o óleo entra em contato com água,
+                não ocorre a sua dissolução, e eles ficam separados em virtude da diferença de densidade.</p>
+                <a href="https://www.manualdaquimica.com/quimica-ambiental/poluicao-provocada-pelo-oleo-cozinha.htm" class="bt btn btn-light" target="_blank">Clique aqui para saber mais!</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./img/FRIGIDEIRA.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">MANEIRA ERRADA DE DESCARTE<br /> 15 SETEMBRO 2021 <BR>!!! NÃO FAÇA ISSO !!!<BR> POLUI OS RIOS! </h5>
+            <p class="card-text">Diariamente, em residências, lanchonetes e restaurantes, por exemplo, o óleo de cozinha
+                é bastante utilizado na preparação de alimentos em geral. Infelizmente, muitas pessoas descartam o óleo utilizado de qualquer forma, não se preocupando com a poluição provocada por ele,A camada de óleo sobre a água prejudica a entrada de luz e de gás oxigênio.
+                Dessa forma, os peixes passam a ter uma oferta menor de oxigênio disponível, o que pode causar a morte desses seres. A diminuição da incidência de luz no ambiente aquático, por sua vez, prejudica todos os processos fotoquímicos nos quais ela é importante, ou seja,
+                o ecossistema aquático. O desenvolvimento do fitoplâncton, por exemplo, fica bastante comprometido. 
+                Vale lembrar que eles são a base da cadeia alimentar aquática.</p>
+            <a href="https://www.ecycle.com.br/descarte-de-oleo-de-cozinha/" class="bt btn btn-light" target="_blank">Clique aqui e aprenda a maneira correta .</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="./img/dicas-de-sustentabilidade.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">DICAS DE SUSTENTABILIDADE</h5>
+            <p class="card-text">Armazene e leve a um posto de coleta  Coloque a sobra da fritura em uma garrafa PET limpa e entregue em um posto de coleta para que seja reciclado corretamente. Pesquise e conheça os locais próximos da sua casa.
+                – Transforme-o em sabão caseiro Você mesmo pode dar um novo destino ao óleo de cozinha. A receita é simples e pode ser feita em casa:
+                Materiais: 5 litros de óleo de cozinha usado, 2 litros de água, 200 mililitros de amaciante, 1 quilo de soda cáustica em escama. <br /></p>
+            <a href="https://www.tendaatacado.com.br/dicas/conheca-boas-praticas-para-o-descarte-de-oleo-de-cozinha" class="bt btn btn-light" target="_blank">Veja a receita completa!</a>
+          </div>
+        </div>
+        <div class="card">
+             <img class="card-img-top" src="./img/oleodecozinha.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">RECICLAGEM DE ÓLEO TEM POTENCIAL DE NEGÓCIO</h5>
+                <p class="card-text">O óleo é um dos itens mais consumidos na refeição do brasileiro.  
+                    Além de utilizado em frituras, compõe leguminosas, carnes e frutas e é ingrediente para fabricação de pães e massas.
+                    Apesar de largamente consumido, a reciclagem de óleo de cozinha, uma solução sustentável, ainda é pouco frequente no Brasil. 
+                    Esta matéria traz uma estimativa de que apenas 1% do óleo de cozinha é reciclado no país. 
+                    Cada família brasileira descarta, em média, 1 litro de óleo mensalmente, no entanto, 99% o despejam na pia da cozinha.</p>
+                <a href="https://www.vgresiduos.com.br/blog/quatro-dicas-para-empreender-com-reciclagem-de-oleo-de-cozinha/" class="bt btn btn-light" target="_blank">Leia mais!</a>
+            </div>
+        </div>
+    </div>
+</div>    
+</a>
+</section>
+
+
+<section>
+    <a name="galeria">
+
+        <div class="caixa">
+            <div class="caixote">
+            <!--conteudo aqui-->
+             
+
+            <div class="container page-top">
+
+
+
+                <div class="row">
+        
+        
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica8.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica8.jpg" class="zoom img-fluid "  alt="">
+                           
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica7.jpg"  class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica7.jpg" class="zoom img-fluid"  alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica5.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica5.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica4.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica4.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica3.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica3.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica2.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica2.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica10.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica10.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a href="./img/dica1.jpg" class="fancybox" rel="ligthbox">
+                            <img  src="./img/dica1.jpg" class="zoom img-fluid "  alt="">
+                        </a>
+                    </div>
+                    
+                    
+                   
+                   
+               </div>
+        
+             
+              
+        
+            </div>
+        
+
+
+            <!-- aqui fecha o conteúdo-->     
+            </div>
+        </div>
+    </section>
+
+<!-- <section>
+    <a name="cadastro"></a>
+    <div class="caixa">
+        <div class=caixote>-->
+      <!-- conteudo aqui -->
+      <!--form de cadastro -->
+      <!--<div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post">
+                <h2 class="text-center"><strong>Crie</strong> seu cadastro.</h2>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)"></div>
+                <div class="form-group">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">Eu concordo com os termos.</label></div>
+                </div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Cadastrar</button></div><a href="#login" class="already">Já tem uma conta? Logue aqui.</a></form>
+        </div>
+    </div>-->
+      <!-- não apague -->
+        <!--</div>
+    </div>
+</section>-->
+<!-- <section>-->
+
+        <!-- <a name="login">
+            <div class="caixa">
+                <div class=caixote>
+                conteudo aqui -->
+                <!--form de login -->
+                   <!-- <div class="form-container">
+                        <div class="image-holder2"></div>
+                            <div class="login-clean">
+                                <form method="post">
+                                    <h2 class="sr-only">Faça seu Login</h2>
+                                    <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
+                                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                    <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
+                            </div>
+                        </div>  
+                    </div>-->
+                <!-- não apague -->
+                <!--</div>
+            </div>
+        </a>
+        </section>-->
+
+<section>
+
+    <a name="sobre">
+        <div class="caixa">
+            <div class=caixote>
+            <!-- conteudo aqui -->
+
+            <div class="article-clean">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                            <div class="intro">
+                                <h1 class="text-center"> Sobre Nós </h1>
+                                <p class="text-center"><span class="by">by</span> <a href="#">Author Name</a><span class="date">Sept 8th, 2018 </span></p><img class="img-fluid" src="assets/img/desk.jpg"></div>
+                            <div class="text">
+                                <p>O Grupo de Projeto Integrador dos alunos do Polo Apareicda da Univesp<span style="text-decoration: underline;"></span> é constituído por sete integrantes da graduação do eixo de Computação, cujo maior objetivo é ajudar a prover inovação e tecnologia para a comunidade e facilitar o dia a dia da população.</p>
+                                <p>Esse projeto visa construir um canal de comunicação e auxiliar no processo de coleta e troca de óleo de cozinha entre os moradores das cidades da região do Vale do Paraíba, nosso ambiente de convívio e sede do nosso Polo de Estudos, e os coletores autorizados, sejam empresas ou autônomos, de modo a reduzir ao máximo o descarte inadequado da matéria.
+                                    Conscientizar por meio da tecnologia é a palavra-chave desse projeto.
+                                </p>
+                                <h2>Tecnologia e Desenvolvimento. </h2>
+                                
+                                <figure><img class="figure-img" src="./img/">
+                                    <figcaption>Caption</figcaption>
+                                </figure>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit
+                                    pulvinar dictum vel in justo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--não apague -->
+            </div>
+        </div>
+    </a>
+
+</section>
+<section>
+
+    <!--<a name="sustentabilidade">
+        <div class="caixa">
+            <div class=caixote>
+
+             conteudo aqui
+
+            <div class="article-clean">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                            <div class="intro">
+                                <h1 class="text-center">Your Wonderful Article Title</h1>
+                                <p class="text-center"><span class="by">by</span> <a href="#">Author Name</a><span class="date">Sept 8th, 2018 </span></p><img class="img-fluid" src="assets/img/desk.jpg"></div>
+                            <div class="text">
+                                <p>Sed lobortis mi. Suspendisse vel placerat ligula. <span style="text-decoration: underline;">Vivamus</span> ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in
+                                    justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac lacus. <strong>Ut vehicula rhoncus</strong> elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit <em>pulvinar dict</em> vel in justo. Vestibulum
+                                    ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                                <h2>Aliquam In Arcu </h2>
+                                <p>Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                    posuere cubilia Curae.</p>
+                                <figure><img class="figure-img" src="assets/img/beach.jpg">
+                                    <figcaption>Caption</figcaption>
+                                </figure>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit
+                                    pulvinar dictum vel in justo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        
+
+            <!--não apague -->
+            </div>
+        </div>
+    </a>
+
+</section>
+
+<section>
+
+    <a name="univesp">
+        <div class="caixa">
+            <div class=caixote>
+            <!-- conteudo aqui -->
+
+            <div class="article-clean">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                            <div class="intro">
+                                <h1 class="text-center">A UNIVESP</h1>
+                                <p class="text-center"><span class="by">by</span> <a href="#">Author Name</a><span class="date">Sept 8th, 2018 </span></p><img class="img-fluid" src="assets/img/desk.jpg"></div>
+                            <div class="text">
+                                <p>A UNIVESP foi criada em 2012 <span style="text-decoration: underline;"></span> com o propósito de colocar a tecnologia a serviço da educação e, assim, contribuir com a universalização da excelência do Ensino Superior no Brasil. </p>
+                                <p>Histórico
+
+                                    A Universidade Virtual do Estado de São Paulo (Univesp) é uma instituição de ensino superior, exclusivamente de educação à distância, criada pela Lei nº 14.836, de 20 de julho de 2012, mantida pelo Governo do Estado de São Paulo e vinculada à Secretaria de Desenvolvimento Econômico (SDE). Entre seus principais parceiros destacam-se a  Universidade de São Paulo (USP), Universidade Estadual Paulista (UNESP), Universidade Estadual de Campinas (UNICAMP) e Centro Paula Souza (CPS). A Instituição foi credenciada junto ao Conselho Estadual de Educação de São Paulo pela Portaria CEE-GP nº 120, de 22 de março de 2013. Seu credenciamento pelo Ministério da Educação (MEC) para a oferta de cursos superiores na modalidade a distância deu-se pela Portaria Ministerial nº 945, de 18 de setembro de 2015, após o parecer favorável dado pelo Conselho Nacional de Educação CNE/CES nº 245/2005.
+                                    
+                                    Conforme o estabelecido em sua lei de criação, a Univesp tem por objetivo o ensino, a pesquisa e a extensão, obedecendo ao princípio de sua indissociabilidade, integrados pelo conhecimento como bem público. Ela se constitui como universidade dedicada à formação de educadores – para a universalização do acesso à educação formal e à educação para cidadania –, assim como a de outros profissionais comprometidos com o bem-estar social e cultural da população.
+                                    
+                                    Com Estatuto e Regimento Geral aprovados por Decreto, a Univesp se submete às normas constitucionais e à legislação aplicáveis às pessoas jurídicas integrantes da administração pública indireta do Estado. A universidade tem autonomia didático-científica, administrativa e de gestão financeira e patrimonial. Sua existência jurídica tem prazo de duração indeterminado, com sede e foro na Comarca da Capital do Estado de São Paulo.
+                                    
+                                    Origem
+                                    
+                                    A Fundação Univesp foi originada por meio do Programa Univesp – Universidade Virtual do Estado de São Paulo –, o qual foi vinculado à extinta Secretaria de Ensino Superior do Estado, e tinha como principal objetivo a expansão e melhor distribuição do ensino superior por meio do aumento do número de vagas ofertadas pelas universidades públicas paulistas.
+                                    
+                                    Para o cumprimento de seus objetivos, o Programa Univesp empreendeu ações junto às Faculdades de Tecnologia (FATECs), do Centro Paula Souza (CPS), ligado à Secretaria de Desenvolvimento, e às duas Faculdades de Medicina, ligadas à Secretaria de Ensino Superior. Com estrutura consorciada o Programa envolveu, ainda, a Fundação Padre Anchieta, a Imprensa Oficial e a Fundação de Amparo à Pesquisa do Estado (FAPESP).
+                                    
+                                    No período de vigência do Programa foram oferecidas: em 2009, 7.500 vagas em curso de Inglês Básico e 2.500 vagas de Espanhol Básico para estudantes do Centro Paula Souza; em 2010, 1.350 vagas no Curso de Pedagogia, em convênio com a Universidade Estadual Paulista Júlio de Mesquita Filho; em 2011, 1.000 vagas no Curso de Especialização em Ética, Valores e Cidadania na Escola e 360 vagas no Curso de Licenciatura em Ciências, repetido com novas 360 vagas em 2012 e em 2013, num total de 1.080 vagas, todas em convênio com a Universidade de São Paulo. Também foram desenvolvidos materiais para o oferecimento do curso de Gestão Empresarial em parceria com as FATECs do Centro Paula Souza.
+                                    
+                                    Em 2014, a UNIVESP realizou a primeira oferta de cursos próprios de graduação: Engenharia de Computação, Engenharia de Produção, Licenciatura em Matemática, Licenciatura em Física, Licenciatura em Química e Licenciatura em  Biologia. O processo ofereceu 3.330 vagas distribuídas em duas entradas, Licenciaturas: 2.034 vagas e Engenharias: 1296 vagas com mais de 12 mil inscrições, em 2015, a Univesp foi credenciada pelo Ministério da Educação (MEC) por meio da Portaria nº 945, de 18 de setembro e pelo Conselho Nacional de Educação (CNE). Em 2016, foram ofertadas mais 918 vagas, 414 vagas para Engenharia de Computação e 504 para Engenharia da Produção em 17 polos distribuídos em 16 municípios do Estado.
+                                    
+                                    Com o objetivo da universalização do ensino superior paulista., em 2017, foi iniciado o plano de expansão. A iniciativa ampliou o campo de atuação da Univesp  para todas as macrorregiões do Estado. No maior programa de inclusão do ensino superior do país, a universidade inseriu em 203 muncípios paulistas, mais de 35 mil estudantes.. Ainda em 2017, a Univesp solicitou junto ao Conselho Estadual de Educação – CEE-SP – o reconhecimento de todos os cursos oferecidos até 2016.
+                                    
+                                    Em 2018, os cursos de Engenharia, Química, Física, Biologia e Matemática foram reconhecidos. No mesmo ano, a Instituição formou os primeiros 169 alunos das Licenciaturas em Matemática, Química, Biologia e Física atendendo a demanda por professores nas escolas de educação básica. EM 2018, a Univesp também ofertou o expressivo número de 42.450 vagas, em dois vestibulares.
+                                    
+                                    Em 2019,  além da implantação de novos cursos, como,  Ciência de Dados, Bacharelado em Tecnologia da Inovação e Letras, a universidade realizou dois vestibulares e a oferta de mais de 21 mil vagas em todas as regiões do Estado. O vestibular 2019.2 destinou no segundo semestre 5.150 vagas para o Eixo de Licenciatura (Pedagogia, Matemática e Letras), voltadas a 184 polos de 156 municípios . Já o processo seletivo iniciado em outubro de 2019, para o ingresso de alunos em 2020, ofertou 16.100 vagas, sendo: 8.050 para Licenciaturas (Letras, Pedagogia e Matemática) e 8.050 para o Eixo de Computação (Bacharelado em Tecnologia da Informação, Ciência de Dados e Engenharia de Computação). As vagas foram oferecidas a 354 polos de 305 municípios do Estado, o maior vestibular em extensão territorial. 
+                                    
+                                    Em 2020, a Universidade ofertou 16 mil vagas para mais de 300 municípios, o maior processo seletivo em extensão territorial e número de vagas gratuitas do ensino superior paulista. Foram oferecidos seis cursos, com duas áreas básicas de ingresso, via vestibular. As Licenciaturas em Letras, Matemática e Pedagogia e os voltados ao eixo de Computação: Bacharelado em Tecnologia da Informação (BTI), Bacharelado em Ciência de Dados e Engenharia de Computação. 
+                                    Em 2021, a Univesp disponibilizou 11.020 vagas para a graduação e superou o marco do ano anterior, com a oferta em 305 municípios, mais uma vez, o maior vestibular em extensão territorial do Estado.  Foram oferecidos seis cursos, com duas áreas básicas de ingresso: as Licenciaturas em Letras, Matemática e Pedagogia)e os voltados ao eixo de Computação ( Bacharelado em Tecnologia da Informação (BTI), Bacharelado em Ciência de Dados e Engenharia de Computação). Hoje, a Univesp totaliza 374 polos, em 325 municípios do Estado, ou seja, está presente em mais de 50% do território paulista. São mais de 50 mil alunos matriculados nos cursos de graduação e pós-graduação. </p>
+                                <figure><img class="figure-img" src="./img/logo-univesp.png">
+                                    <figcaption>Caption</figcaption>
+                                </figure>
+                                <p>Logo da Univesp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--não apague-->
+            </div>
+        </div>
+    </a>
+
+</section>
+
+ 
+
+</body>
+ <!--
+
+    footer com bootstrap
+
+ -->  
+ <div class="footer-clean">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Menu Inferior</h3>
+                    <ul>
+                        <li><a href="#">Coleta Autorizada</a></li>
+                        <li><a href="#">Cadastro</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Sobre Nós</h3>
+                    <ul>
+                        <li><a href="https://univesp.br/">Univesp</a></li>
+                        <li><a href="#">Projeto Integrador</a></li>
+                        <li><a href="#">Comunidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Fale com nosso time</h3>
+                    <ul>
+                        <li><a href="tel:5512xxxx-xxxx"><i class="fa fa-phone" aria-hidden="true"> &nbsp; Telefone </i></a></li>
+                        <li><a href="mailto:@aluno.univesp.br"><i class="fa fa-envelope" aria-hidden="true"> &nbsp; E-mail</i></a></li>
+                        <li><a href="https://goo.gl/maps/nLz6mk9MPgGCHGv97"><i class="fa fa-location-arrow" aria-hidden="true"> &nbsp; Onde nos encontrar</i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                    <p class="copyright">DESENVOLVIDO PELOS ALUNOS POLO APARECIDA UNIVESP © 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</html>
